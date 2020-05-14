@@ -1,0 +1,204 @@
+<html>
+    <head>
+        
+            <link href="../visualization/check.css" rel="stylesheet" type="text/css" />
+            
+            <script type="text/javascript" src="echarts.js" ></script>
+            <script type="text/javascript" src="check.js" ></script>
+        </head>
+        <body>
+            <div id="background">
+                <div id="rectangle">LOGO</div>
+                <div id="square">Log Out</div>
+                <div id="settings"><img src="images/sz.PNG"></div>
+                <div id="bell"><img src="images/xx.PNG"></div>
+            </div>
+            <div id="contet">
+                <div id="top">
+                    <div id="audience">Audience Overview</div>
+                    <div id="roseville">Roseville,CA</div>
+                </div>
+                <div id="dashboard">
+                    <ul>
+                         <li>DASHBOARD</li>&nbsp;&nbsp;&nbsp;
+                         <li>PROJECTS</li>&nbsp;&nbsp;&nbsp;
+                         <li>CALENDAR</li>&nbsp;&nbsp;&nbsp;
+                         <li>MAILBOX</li>&nbsp;&nbsp;&nbsp;
+                         <li>SETTINGS</li>
+                    </ul>
+                </div>
+                <div id="base">
+                    <div id="carousel">
+                        <img src="images/99.jpg">
+                    </div>
+                </div>
+                <div id="baseone">
+                    <div id="support">Support Requsts</div>
+                    <button id="button">View All</button>
+                    <div id="line"></div>
+                    <div id="time">TIME</div>
+                    <div id="username">USERNAME</div>
+                    <div id="status">STATUS</div>
+                    <div id="ince">
+                        <div id="t">9:45pm</div>
+                        <div id="u">info@design.com</div>
+                        <button id="s">Solved</button>
+                    </div>
+                    <div id="once">
+                        <div id="i">9:45pm</div>
+                        <div id="e">info@design.com</div>
+                        <button id="r">Solved</button>
+                    </div>
+
+                </div>
+                <div id="basetwo">
+                    <div id="curve">曲线数据展示</div>
+                    <div id="curves">
+                        <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('curves'));
+                            var option = {
+                                xAxis: {
+                                    type: 'category',
+                                    data: ["04/15", "04/16", "04/17", "04/18", "04/19", "04/20", "04/21", "04/22", "04/23", "04/24", "04/25", "04/26", "04/27", "04/28", "04/29", "04/30", "05/01", "05/02", "05/03", "05/04", "05/05", "05/06", "05/07", "05/08", "05/09", "05/10", "05/11", "05/12", "05/13", "05/14"]
+                                },
+                                yAxis: {
+                                        type: 'value'
+                                },
+                                series: [{
+                                    data: [9911, 8020, 8975, 5410, 4235, 6986, 5984, 8642, 5556, 241, 5299, 8688, 6047, 4883, 2132, 7236, 6873, 2615, 448, 7254, 3891, 3809, 2362, 1492, 1909, 757, 1660, 2155, 3541, 8386],
+                                        type: 'line'
+                                    }]
+                                };
+                            myChart.setOption(option);
+                        </script>
+                    </div>
+                </div>
+                <div id="chart">
+                    <div id="pancake">饼状图数据显示</div>
+                    <div id="pancakes">
+                        <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('pancakes'));
+                        option = {
+                            title: {
+                                text: ' ',
+                                subtext: ' ',
+                                left: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item',
+                                formatter: '{a} <br/>{b} : {c} ({d}%)'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left',
+                                data: ['"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"']
+                            },
+                            series: [
+                                {
+                                    name: '访问来源',
+                                    type: 'pie',
+                                    radius: '55%',
+                                    center: ['50%', '60%'],
+                                    data: [
+                                        {value: 1175, name: 'Mon'},
+                                        {value: 7557, name: 'Tue'},
+                                        {value: 6101, name: 'Wed'},
+                                        {value: 4654, name: 'Thu'},
+                                        {value: 1205, name: 'Fri'},
+                                        {value: 6193, name: 'Sat'},
+                                        {value: 3313, name: 'Sun'},
+                                    ],
+                                    emphasis: {
+                                        itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        myChart.setOption(option);
+                    </script>
+                    </div>
+                </div>
+                <div id="chartone">
+                    <div id="columnar">柱状图数据显示</div>
+                    <div id="columnars">
+                        <script type="text/javascript">
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart = echarts.init(document.getElementById('columnars'));
+                    
+                            // 指定图表的配置项和数据
+                            var option = {
+                                title: {
+                                    text: ''
+                                },
+                                tooltip: {},
+                                legend: {
+                                    data:['商品数']
+                                },
+                                xAxis: {
+                                    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+                                },
+                                yAxis: {},
+                                series: [{
+                                    name: '商品数',
+                                    type: 'bar',
+                                    data: [9680, 4757, 580, 6722, 4714, 4584, 1516]
+                                }]
+                            };
+                    
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart.setOption(option);
+                        </script>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="backgtoundone">
+                <div id="rectangles">LOGO</div>
+                <div id="news">
+                    <ul>
+                        <li>NEWS</li>
+                        <li>CHANNELS</li>
+                        <li>OVERVIEW</li>
+                        <li>TIMELINE</li>
+                    </ul>
+                </div>
+                <div id="sport"> 
+                    <ul>
+                        <li>SPORT</li>
+                        <li>CULTURE</li>
+                        <li>NATURE</li>
+                        <li>MUSIC</li>
+                    </ul>
+                </div>
+                <div id="weather">
+                    <ul>
+                        <li>WEATHER</li>
+                        <li>AUTOS</li>
+                        <li>LOCAL</li>
+                        <li>SHOP</li>
+                    </ul>
+                </div>
+                <div id="future">
+                    <ul>
+                        <li>FUTURE</li>
+                        <li>FOOD</li>
+                        <li>EARTH</li>
+                        <li>TV</li>
+                    </ul>
+                </div>
+                <div id="trvel">
+                    <ul>
+                        <li>TRAVEL</li>
+                        <li>RADIO</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </body>
+
+</html>
